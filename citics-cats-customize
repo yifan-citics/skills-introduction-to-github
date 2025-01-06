@@ -1,0 +1,20 @@
+"""cats量化交易方案——windows操作系统"""
+#001 识别客户需求
+  明确客户需求，重点关注客户对量化交易的认知，是否认可量化交易的逻辑，以及对市场看法，想实现的策略细节，量价信号，标的种类；
+  确认客户的资产规模达到500万，以及后续参与量化交易的规模,商量佣金细节；
+#002 搭建模拟交易环境
+  确认客户要参与自建的量化交易模型后，就可以准备搭建模拟交易环境了：
+  （1）申请cats模拟账户，申请邮件写明要用“策略框架”、“回测”（营业部有现成的，不过还是建议客户申请一个）
+  （2）拿到cats账户后，准备配置python环境：
+        1）下载安装python 3.10至cats安装目录下： https://www.python.org/ftp/python/3.10.8/python-3.10.8-amd64.exe
+        2）配置相关数据安装包，直接在windows的命令窗口就可以实现，具体操作流程如下：
+        a.微软键+R  ==>  CMD
+        b.修改环境变量至python所在安装目录：set PATH=D:\codeProject\PythonEnv\Python38 （修改成本地 Python 所在的目录）。这里也可以手动修改：控制面板-系统-高级系统设置-环境变量-Path-编辑-新建python的pip安装目录
+        c.继续在CMD加载第三方python包：
+        python -m pip install numpy
+        python -m pip install “pandas<2.0.0”
+        python -m pip install sqlalchemy==1.3.24
+        python -m pip install pyz
+        d.基本交易策略往往还需要一个TA-Lib，第三方python包，安装验证指引：https://blog.csdn.net/2403_88102872/article/details/143091389；
+  （3）调试以及回测
+
