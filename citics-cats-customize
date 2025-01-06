@@ -16,5 +16,5 @@
         python -m pip install sqlalchemy==1.3.24
         python -m pip install pyz
         d.基本交易策略往往还需要一个TA-Lib，第三方python包，安装验证指引：https://blog.csdn.net/2403_88102872/article/details/143091389；
-  （3）调试以及回测
+  （3）调试以及回测 python不提供IDE界面调试，建议使用pycharm
 
